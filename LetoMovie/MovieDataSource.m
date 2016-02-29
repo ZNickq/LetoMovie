@@ -26,18 +26,4 @@
     return mtvc;
 }
 
-- (void) setAllMovies:(NSArray *)allMovies
-{
-    _allMovies = allMovies;
-    
-    NSSortDescriptor *rating = [[NSSortDescriptor alloc] initWithKey:@"rating" ascending:NO];
-    NSSortDescriptor *title = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
-    
-    NSArray *sortDescriptors = @[rating, title];
-    
-    _allMovies = [allMovies sortedArrayUsingDescriptors:sortDescriptors];
-
-    
-}
-
 @end

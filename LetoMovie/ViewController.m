@@ -48,6 +48,7 @@
         parser = [[NSXMLParser alloc] initWithContentsOfURL:ratingURL];
         NSDictionary *ratingData = [[XMLDictionaryParser sharedInstance] dictionaryWithParser:parser];
         
+        //Only parse if available
         NSString *rating = ratingData[@"movie"][@"_imdbRating"];
         float parsedRating = 10.0;
         if(![rating isEqualToString:@"N/A"]) {
@@ -57,13 +58,17 @@
         Movie *movie = [[Movie alloc] initWithTitle:title image:imageURL andRating:parsedRating];
         [loadedMovies addObject:movie];
     }
-    self.dataSource.allMovies = loadedMovies;
-    [self performSelectorOnMainThread:@selector(showMovies) withObject:nil waitUntilDone:NO];
-}
-
-- (void) showMovies
-{
-    [self.movieTableView reloadData];
+    
+    
+    
+    //Sort by rating first, then title descending
+    NSSortDescriptor *rating = [[NSSortDescriptor alloc] initWithKey:@"rating" ascending:NO];
+    NSSortDescriptor *title = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
+    NSArray *sortDescriptors = @[rating, title];
+    self.dataSource.allMovies = [loadedMovies sortedArrayUsingDescriptors:sortDescriptors];
+    
+    
+    [self.movieTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
 
 

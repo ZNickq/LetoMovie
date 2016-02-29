@@ -37,7 +37,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="pTz-WY-4mH">
-                                                    <rect key="frame" x="112" y="8" width="56.5" height="27"/>
+                                                    <rect key="frame" x="112" y="8" width="480" height="27"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -58,6 +58,7 @@
                                                 <constraint firstItem="pxq-aJ-TW4" firstAttribute="leading" secondItem="pTz-WY-4mH" secondAttribute="leading" id="ZHT-Vx-3CC"/>
                                                 <constraint firstItem="pxq-aJ-TW4" firstAttribute="centerX" secondItem="pTz-WY-4mH" secondAttribute="centerX" id="bSr-Os-blc"/>
                                                 <constraint firstItem="pTz-WY-4mH" firstAttribute="leading" secondItem="Nmb-iW-Kbo" secondAttribute="trailing" constant="8" id="oDD-5o-Cgt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pTz-WY-4mH" secondAttribute="trailing" id="qQ4-jb-330"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">

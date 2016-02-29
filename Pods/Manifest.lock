@@ -1,0 +1,10 @@
+PODS:
+  - XMLDictionary (1.4)
+
+DEPENDENCIES:
+  - XMLDictionary (~> 1.4)
+
+SPEC CHECKSUMS:
+  XMLDictionary: f9f51601ba76678b594ab485f2b00ec1fed23724
+
+COCOAPODS: 0.39.0

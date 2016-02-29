@@ -1,0 +1,1 @@
+pod 'XMLDictionary', '~> 1.4'

@@ -13,6 +13,9 @@
 		11EC1B941C84B5EA00A2DC67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EC1B921C84B5EA00A2DC67 /* Main.storyboard */; };
 		11EC1B961C84B5EA00A2DC67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11EC1B951C84B5EA00A2DC67 /* Assets.xcassets */; };
 		11EC1B991C84B5EA00A2DC67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EC1B971C84B5EA00A2DC67 /* LaunchScreen.storyboard */; };
+		11EC1BA31C84BB3600A2DC67 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1BA21C84BB3600A2DC67 /* Movie.m */; };
+		11EC1BA71C84C49E00A2DC67 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1BA61C84C49E00A2DC67 /* MovieTableViewCell.m */; };
+		E51CE99AD3270B0EE68C9DA7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49564D468557B242A7238C2A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		11EC1B951C84B5EA00A2DC67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11EC1B981C84B5EA00A2DC67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11EC1B9A1C84B5EA00A2DC67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11EC1BA11C84BB3600A2DC67 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		11EC1BA21C84BB3600A2DC67 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		11EC1BA51C84C49E00A2DC67 /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		11EC1BA61C84C49E00A2DC67 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		49564D468557B242A7238C2A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		89E0C76E16A6648D5BEDB240 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A60025C012E23472990F79F3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51CE99AD3270B0EE68C9DA7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +55,8 @@
 			children = (
 				11EC1B881C84B5EA00A2DC67 /* LetoMovie */,
 				11EC1B871C84B5EA00A2DC67 /* Products */,
+				DF76423775AF4F43965A73F9 /* Pods */,
+				881E6E5C1CC864255252620C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +71,8 @@
 		11EC1B881C84B5EA00A2DC67 /* LetoMovie */ = {
 			isa = PBXGroup;
 			children = (
+				11EC1BA41C84C48D00A2DC67 /* View */,
+				11EC1BA01C84BB2900A2DC67 /* Model */,
 				11EC1B8C1C84B5EA00A2DC67 /* AppDelegate.h */,
 				11EC1B8D1C84B5EA00A2DC67 /* AppDelegate.m */,
 				11EC1B8F1C84B5EA00A2DC67 /* ViewController.h */,
@@ -79,6 +94,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		11EC1BA01C84BB2900A2DC67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11EC1BA11C84BB3600A2DC67 /* Movie.h */,
+				11EC1BA21C84BB3600A2DC67 /* Movie.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		11EC1BA41C84C48D00A2DC67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11EC1BA51C84C49E00A2DC67 /* MovieTableViewCell.h */,
+				11EC1BA61C84C49E00A2DC67 /* MovieTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		881E6E5C1CC864255252620C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49564D468557B242A7238C2A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF76423775AF4F43965A73F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A60025C012E23472990F79F3 /* Pods.debug.xcconfig */,
+				89E0C76E16A6648D5BEDB240 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11EC1B9D1C84B5EA00A2DC67 /* Build configuration list for PBXNativeTarget "LetoMovie" */;
 			buildPhases = (
+				51BA35B9AF59FD80F208D17E /* Check Pods Manifest.lock */,
 				11EC1B821C84B5EA00A2DC67 /* Sources */,
 				11EC1B831C84B5EA00A2DC67 /* Frameworks */,
 				11EC1B841C84B5EA00A2DC67 /* Resources */,
+				65F01399E9B2CFFA5CDA1D3B /* Embed Pods Frameworks */,
+				60E3DF91FCD1799AE3E3B0C9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +197,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51BA35B9AF59FD80F208D17E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		60E3DF91FCD1799AE3E3B0C9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65F01399E9B2CFFA5CDA1D3B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		11EC1B821C84B5EA00A2DC67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,6 +252,8 @@
 			files = (
 				11EC1B911C84B5EA00A2DC67 /* ViewController.m in Sources */,
 				11EC1B8E1C84B5EA00A2DC67 /* AppDelegate.m in Sources */,
+				11EC1BA31C84BB3600A2DC67 /* Movie.m in Sources */,
+				11EC1BA71C84C49E00A2DC67 /* MovieTableViewCell.m in Sources */,
 				11EC1B8B1C84B5EA00A2DC67 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +362,7 @@
 		};
 		11EC1B9E1C84B5EA00A2DC67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A60025C012E23472990F79F3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LetoMovie/Info.plist;
@@ -270,6 +374,7 @@
 		};
 		11EC1B9F1C84B5EA00A2DC67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89E0C76E16A6648D5BEDB240 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LetoMovie/Info.plist;
@@ -298,6 +403,7 @@
 				11EC1B9F1C84B5EA00A2DC67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,7 +10,7 @@
 
 @implementation Movie
 
-- (id) initWithTitle: (NSString *) title image: (UIImage *) image andRating: (float) rating;
+- (id) initWithTitle: (NSString *) title image: (NSString *) image andRating: (float) rating;
 {
     self = [super init];
     if(self) {

@@ -15,6 +15,7 @@
 		11EC1B991C84B5EA00A2DC67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EC1B971C84B5EA00A2DC67 /* LaunchScreen.storyboard */; };
 		11EC1BA31C84BB3600A2DC67 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1BA21C84BB3600A2DC67 /* Movie.m */; };
 		11EC1BA71C84C49E00A2DC67 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1BA61C84C49E00A2DC67 /* MovieTableViewCell.m */; };
+		11EC1BAA1C84C6E000A2DC67 /* MovieDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1BA91C84C6E000A2DC67 /* MovieDataSource.m */; };
 		E51CE99AD3270B0EE68C9DA7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49564D468557B242A7238C2A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		11EC1BA21C84BB3600A2DC67 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		11EC1BA51C84C49E00A2DC67 /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
 		11EC1BA61C84C49E00A2DC67 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		11EC1BA81C84C6E000A2DC67 /* MovieDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDataSource.h; sourceTree = "<group>"; };
+		11EC1BA91C84C6E000A2DC67 /* MovieDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDataSource.m; sourceTree = "<group>"; };
 		49564D468557B242A7238C2A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E0C76E16A6648D5BEDB240 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A60025C012E23472990F79F3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 			children = (
 				11EC1BA11C84BB3600A2DC67 /* Movie.h */,
 				11EC1BA21C84BB3600A2DC67 /* Movie.m */,
+				11EC1BA81C84C6E000A2DC67 /* MovieDataSource.h */,
+				11EC1BA91C84C6E000A2DC67 /* MovieDataSource.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				11EC1B911C84B5EA00A2DC67 /* ViewController.m in Sources */,
 				11EC1B8E1C84B5EA00A2DC67 /* AppDelegate.m in Sources */,
 				11EC1BA31C84BB3600A2DC67 /* Movie.m in Sources */,
+				11EC1BAA1C84C6E000A2DC67 /* MovieDataSource.m in Sources */,
 				11EC1BA71C84C49E00A2DC67 /* MovieTableViewCell.m in Sources */,
 				11EC1B8B1C84B5EA00A2DC67 /* main.m in Sources */,
 			);

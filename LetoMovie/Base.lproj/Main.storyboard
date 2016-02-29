@@ -19,15 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zMr-iq-BXU">
-                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zMr-iq-BXU">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="160" id="PM8-Cd-cAf" customClass="MovieTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="160"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="160" id="PM8-Cd-cAf" customClass="MovieTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PM8-Cd-cAf" id="uLT-Jb-m1N">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="159.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="159.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nmb-iW-Kbo">
@@ -36,16 +36,16 @@
                                                         <constraint firstAttribute="width" secondItem="Nmb-iW-Kbo" secondAttribute="height" multiplier="111:166" id="YaN-cX-lib"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTz-WY-4mH">
-                                                    <rect key="frame" x="112" y="8" width="46.5" height="22.5"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="pTz-WY-4mH">
+                                                    <rect key="frame" x="112" y="8" width="56.5" height="27"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxq-aJ-TW4">
-                                                    <rect key="frame" x="112" y="31" width="37.5" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <rect key="frame" x="112" y="35.5" width="46.5" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" red="0.90350404829999997" green="0.36978783189999997" blue="0.1953018463" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -78,10 +78,13 @@
                         <constraints>
                             <constraint firstItem="zMr-iq-BXU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eNi-V4-sg9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zMr-iq-BXU" secondAttribute="bottom" id="qY7-jP-zLc"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="zMr-iq-BXU" secondAttribute="leading" id="qt4-0m-pCL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zMr-iq-BXU" secondAttribute="trailing" id="zsP-pT-i1T"/>
+                            <constraint firstAttribute="leading" secondItem="zMr-iq-BXU" secondAttribute="leading" id="qt4-0m-pCL"/>
+                            <constraint firstAttribute="trailing" secondItem="zMr-iq-BXU" secondAttribute="trailing" id="zsP-pT-i1T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="movieTableView" destination="zMr-iq-BXU" id="t2R-BV-UvV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

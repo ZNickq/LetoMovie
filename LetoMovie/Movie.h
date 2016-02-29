@@ -12,9 +12,9 @@
 @interface Movie : NSObject
 
 @property NSString *title;
-@property UIImage *thumbnail;
+@property NSString *thumbnail;
 @property float rating;
 
-- (id) initWithTitle: (NSString *) title image: (UIImage *) image andRating: (float) rating;
+- (id) initWithTitle: (NSString *) title image: (NSString *) image andRating: (float) rating;
 
 @end

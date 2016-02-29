@@ -9,10 +9,11 @@
 #import "ViewController.h"
 #import "XMLDictionary.h"
 #import "Movie.h"
+#import "MovieDataSource.h"
 
 @interface ViewController ()
 
-@property NSArray *allMovies;
+@property MovieDataSource *dataSource;
 
 @end
 
@@ -22,6 +23,9 @@
     [super viewDidLoad];
     
     [self performSelectorInBackground:@selector(loadMovies) withObject:nil];
+    
+    self.dataSource = [MovieDataSource new];
+    self.movieTableView.dataSource = _dataSource;
 }
 
 - (void) loadMovies
@@ -37,10 +41,6 @@
         NSString *title = each[@"title"];
         NSString *imageURL = each[@"enclosure"][@"_url"];
         
-        //Get image from URL
-        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
-        UIImage *image = [UIImage imageWithData:data];
-        
         //Get movie rating from omdb
         NSString *ratingString = [NSString stringWithFormat:@"http://www.omdbapi.com/?t=%@&y=&plot=short&r=xml", title];
         ratingString = [ratingString stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
@@ -54,15 +54,17 @@
             parsedRating = [rating floatValue];
         }
         
-        Movie *movie = [[Movie alloc] initWithTitle:title image:image andRating:parsedRating];
+        Movie *movie = [[Movie alloc] initWithTitle:title image:imageURL andRating:parsedRating];
         [loadedMovies addObject:movie];
     }
-    
-    
+    self.dataSource.allMovies = loadedMovies;
+    [self performSelectorOnMainThread:@selector(showMovies) withObject:nil waitUntilDone:NO];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void) showMovies
+{
+    [self.movieTableView reloadData];
 }
+
 
 @end

@@ -28,6 +28,14 @@
     self.movieTableView.dataSource = _dataSource;
 }
 
+/*
+ This method actually loads ratings from omdbapi, instead of Popcorn Time.
+ This is because PT doesn't offer an easy-to-access API anymore, and approval for a key can take up to 60 days. 
+ 
+ Also, I was unsure if using external libraries was discouraged for this exercise, so I tried to stick to default methods as much as possible.
+ If given the liberty to use another library, I would use AFNetworking, both to simplify the below networking code and to handle image loading/cachings.
+ Right now, there is a rudimentary caching method implemented in MovieTableViewCell, but AFNetworking has far superior caching methods for that purpose.
+ */
 - (void) loadMovies
 {
     //Running on separate thread now

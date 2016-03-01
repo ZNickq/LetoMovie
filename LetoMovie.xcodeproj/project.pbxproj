@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		117B5CF41C865BAC007AA738 /* CineworldAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5CF31C865BAC007AA738 /* CineworldAPI.m */; };
 		11EC1B8B1C84B5EA00A2DC67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1B8A1C84B5EA00A2DC67 /* main.m */; };
 		11EC1B8E1C84B5EA00A2DC67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1B8D1C84B5EA00A2DC67 /* AppDelegate.m */; };
 		11EC1B911C84B5EA00A2DC67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1B901C84B5EA00A2DC67 /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		117B5CF21C865BAC007AA738 /* CineworldAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CineworldAPI.h; sourceTree = "<group>"; };
+		117B5CF31C865BAC007AA738 /* CineworldAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CineworldAPI.m; sourceTree = "<group>"; };
 		11EC1B861C84B5EA00A2DC67 /* LetoMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetoMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EC1B8A1C84B5EA00A2DC67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		11EC1B8C1C84B5EA00A2DC67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				11EC1B971C84B5EA00A2DC67 /* LaunchScreen.storyboard */,
 				11EC1B9A1C84B5EA00A2DC67 /* Info.plist */,
 				11EC1B891C84B5EA00A2DC67 /* Supporting Files */,
+				117B5CF21C865BAC007AA738 /* CineworldAPI.h */,
+				117B5CF31C865BAC007AA738 /* CineworldAPI.m */,
 			);
 			path = LetoMovie;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				11EC1B8E1C84B5EA00A2DC67 /* AppDelegate.m in Sources */,
 				11EC1BA31C84BB3600A2DC67 /* Movie.m in Sources */,
 				11EC1BAA1C84C6E000A2DC67 /* MovieDataSource.m in Sources */,
+				117B5CF41C865BAC007AA738 /* CineworldAPI.m in Sources */,
 				11EC1BA71C84C49E00A2DC67 /* MovieTableViewCell.m in Sources */,
 				11EC1B8B1C84B5EA00A2DC67 /* main.m in Sources */,
 			);

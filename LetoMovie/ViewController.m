@@ -10,10 +10,18 @@
 #import "XMLDictionary.h"
 #import "Movie.h"
 #import "MovieDataSource.h"
+#import "CineworldAPI.h"
+#import "MapViewController.h"
 
 @interface ViewController ()
 
 @property MovieDataSource *dataSource;
+@property CineworldAPI *api;
+
+@property CLLocationManager *locationManager;
+
+
+@property NSArray *postcodesToShow;
 
 @end
 
@@ -22,9 +30,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    self.title = @"Movies";
+    _locationManager = [CLLocationManager new];
+    [self.locationManager requestWhenInUseAuthorization];
+    
+    self.api = [CineworldAPI new];
+    self.dataSource = [MovieDataSource new];
     [self performSelectorInBackground:@selector(loadMovies) withObject:nil];
     
-    self.dataSource = [MovieDataSource new];
+    self.movieTableView.delegate = self;
     self.movieTableView.dataSource = _dataSource;
 }
 
@@ -77,6 +92,33 @@
     
     
     [self.movieTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+}
+
+
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Movie *movie = self.dataSource.allMovies[indexPath.row];
+    NSString *title = movie.title;
+    self.postcodesToShow = [self.api findClosestMatch:title];
+    if(self.postcodesToShow.count == 0) {
+        //Deprecated, but works on < iOS 9
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
+                                                        message:@"We're sorry, but it doesn't seem like Cineworld is playing that movie!"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel" otherButtonTitles: nil];
+        [alert show];
+    } else {
+        [self performSegueWithIdentifier:@"showMap" sender:self];
+    }
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"showMap"]) {
+        MapViewController *map = segue.destinationViewController;
+        map.postcodes = self.postcodesToShow;
+    }
 }
 
 

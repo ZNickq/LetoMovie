@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		117B5CF41C865BAC007AA738 /* CineworldAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5CF31C865BAC007AA738 /* CineworldAPI.m */; };
+		117B5CF81C866896007AA738 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5CF71C866896007AA738 /* MapViewController.m */; };
+		117B5CFA1C8668AA007AA738 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117B5CF91C8668AA007AA738 /* MapKit.framework */; };
 		11EC1B8B1C84B5EA00A2DC67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1B8A1C84B5EA00A2DC67 /* main.m */; };
 		11EC1B8E1C84B5EA00A2DC67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1B8D1C84B5EA00A2DC67 /* AppDelegate.m */; };
 		11EC1B911C84B5EA00A2DC67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC1B901C84B5EA00A2DC67 /* ViewController.m */; };
@@ -23,6 +25,9 @@
 /* Begin PBXFileReference section */
 		117B5CF21C865BAC007AA738 /* CineworldAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CineworldAPI.h; sourceTree = "<group>"; };
 		117B5CF31C865BAC007AA738 /* CineworldAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CineworldAPI.m; sourceTree = "<group>"; };
+		117B5CF61C866896007AA738 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		117B5CF71C866896007AA738 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		117B5CF91C8668AA007AA738 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		11EC1B861C84B5EA00A2DC67 /* LetoMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetoMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EC1B8A1C84B5EA00A2DC67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		11EC1B8C1C84B5EA00A2DC67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117B5CFA1C8668AA007AA738 /* MapKit.framework in Frameworks */,
 				E51CE99AD3270B0EE68C9DA7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		117B5CF51C866886007AA738 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				117B5CF61C866896007AA738 /* MapViewController.h */,
+				117B5CF71C866896007AA738 /* MapViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		11EC1B7D1C84B5EA00A2DC67 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +92,7 @@
 		11EC1B881C84B5EA00A2DC67 /* LetoMovie */ = {
 			isa = PBXGroup;
 			children = (
+				117B5CF51C866886007AA738 /* Map */,
 				11EC1BA41C84C48D00A2DC67 /* View */,
 				11EC1BA01C84BB2900A2DC67 /* Model */,
 				11EC1B8C1C84B5EA00A2DC67 /* AppDelegate.h */,
@@ -125,6 +141,7 @@
 		881E6E5C1CC864255252620C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				117B5CF91C8668AA007AA738 /* MapKit.framework */,
 				49564D468557B242A7238C2A /* libPods.a */,
 			);
 			name = Frameworks;
@@ -263,6 +280,7 @@
 				11EC1B911C84B5EA00A2DC67 /* ViewController.m in Sources */,
 				11EC1B8E1C84B5EA00A2DC67 /* AppDelegate.m in Sources */,
 				11EC1BA31C84BB3600A2DC67 /* Movie.m in Sources */,
+				117B5CF81C866896007AA738 /* MapViewController.m in Sources */,
 				11EC1BAA1C84C6E000A2DC67 /* MovieDataSource.m in Sources */,
 				117B5CF41C865BAC007AA738 /* CineworldAPI.m in Sources */,
 				11EC1BA71C84C49E00A2DC67 /* MovieTableViewCell.m in Sources */,

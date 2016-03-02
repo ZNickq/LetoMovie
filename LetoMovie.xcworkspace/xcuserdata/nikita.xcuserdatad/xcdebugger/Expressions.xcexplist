@@ -10,5 +10,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[CineworldAPI loadMovieData]:CineworldAPI.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CineworldAPI findClosestMatch:]:CineworldAPI.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "moviesDictionary">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

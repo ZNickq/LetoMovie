@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@interface CineworldMovie : NSObject
+
+@property NSString *title;
+@property NSInteger edi;
+
+@end
+
 @interface CineworldAPI : NSObject
+
+- (NSArray *) findClosestMatch: (NSString *) title;
 
 @end

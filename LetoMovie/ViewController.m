@@ -22,10 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self performSelectorInBackground:@selector(loadMovies) withObject:nil];
-    
     self.dataSource = [MovieDataSource new];
     self.movieTableView.dataSource = _dataSource;
+    
+    [self performSelectorInBackground:@selector(loadMovies) withObject:nil];
+    
 }
 
 /*
